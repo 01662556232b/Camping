@@ -1,0 +1,271 @@
+/* dấu * : chọn tất cả thẻ HTML */
+body {
+    background: #faf4f2;
+}
+.clear {
+    clear: both;
+}
+*{
+    /* reset margin, padding mặc định của trình duyệt */
+    /* Global dùng chung cho tất cả toàn bộ web */
+    margin: 0;
+    padding: 0;
+    /* giúp giữ nguyên kích thước width của thẻ khi thêm padding */
+    box-sizing: border-box;
+}
+
+
+
+
+/* ul (ảnh hưởng cả hệ thống web) */
+
+/* Chỉ áp dụng cho ul của header */
+.header ul{
+    /*B1: xóa dấu tròn đen */
+    list-style: none;
+}
+
+.header a{
+    /* B2: xóa dấu gạch chân thả a */
+    text-decoration: none;
+    color: black;
+}
+
+.header li {
+    /* B3: Chuyển li từ block sang inline => các li nằm chung 1 hàng */
+    display: inline;
+    /* Box model: các thể hiện của trình duyệt đối với các thẻ html, giúp phân biệt các vùng (margin, pading, border, content) trong phạm vi của thẻ */
+    /* Phạm vi của 1 thẻ sẽ từ border trở vào */
+    /* margin: khoảng cách từ thẻ này đến thẻ kia */
+/* pading: khoảng cách từ content đến border của thẻ */
+    margin: 10px;
+}
+
+/* HEADER */
+.header{
+    background-color:#f8e1db;
+    /* tên màu (white, red..), hex(#), rgb(0,0,0) */
+    padding:10px 35px;
+    /* t,b r,l */
+}
+
+
+.img-logo {
+    margin-left: 5px;
+}
+/* CAROUSEL */
+.carousel {
+    background-image: url(../img/BG.png);
+    /* Do thẻ carousel đang bị thiếu height */
+     height: 700px; 
+     /* bg size: chỉnh lại kích thước hìh nền, cover: phủ hết khung của thẻ carousel */
+     background-size: cover;
+     /* bg posi: vị trí ưu tiên hiển thị của hình nền, center:chính giữa */
+     background-position: center;
+}
+/* đường dẫn thêm backgroun bằng HMTL */
+/* .carousel img { */
+    /* width: 100%; */
+    /* height: 600px; */
+.title {
+    margin: 20px;
+    font-size: 15px;
+    /* background-color: #f8e1db; */
+    text-align: center;
+    
+    
+
+}
+.title h2{
+    color: darkgray;
+}
+
+
+/* display: inline chỉ áp dụng cho nội dung đơn giản( chứa 1 con hay 1 dòng chữ ngắn) */
+/* float : gúp sắp xếp các khối nội dung, hỗ trợ cho tất cả các trình duyệt từ cũ đến mới, mọi phiên bản */
+.activities__item {
+    /* lưu ý: thẻ nào cần sắp xếp thì gọi thẻ đấy */
+    float: left;
+    /* with: kích thước, quy ước chung là 100% (tối đa) chia cho 4 */
+    /* width: :100% , nếu tràn thì trình duyệt sẽ làm rớt hàng các sản phẩm */
+    /* item (width): content+padding+border
+    content (25% +2opx)X 4 > 100%
+    margin + vào width thẻ cha */
+    width: 25%;
+    padding: 10px;
+    border-radius: 20px;  
+    
+    /* Nếu thẻ con chưa có thuộc tính css đó, thì khi xét cho cha thẻ con đó sẽ được kế thừa ( text- align, color, font) */
+    text-align: center;
+    
+    /* border : 1px solid red */
+}
+.activities__background{
+    background: #ffff;
+    
+    padding: 20px;
+    /* border- radius: bo tròn  */
+    border-radius: 20px;
+}
+.activities__image img{
+    width: 100%;
+    border-radius: 20px; 
+} 
+    
+.activities__info p{
+    margin:  15px 0 ;
+}
+.activities__info h3{
+    margin: 10px;
+}
+.activities__item button{
+    border: 1px solid #e6e6e6;
+
+    background-color:#e6e6e6;
+    border-radius: 30px;
+    padding: 10px 20px;
+    /* hiện dấu bàn tay của chuột người dùng khi di chuyển chuột vào thẻ */
+    cursor: pointer;
+   
+}
+/* hover */
+/* di chuyển chuột vào button và thẻ button cần đổi màu  */
+.activities__info button:hover{
+background-color: #e76f51;
+/* background-color: transparent;: màu nền trong suốt */
+
+border-color: #e76f51;
+}
+.activities_icon i{
+    color: #e76f51;
+    font-size: 30px;
+    /* thẻ i do có tác động của thư viện font awesome, thư viện đã xét display block cho thẻ i  */
+}
+.activities__image{
+    position: relative;
+}
+.activities_icon{
+    position: absolute;
+    /* top, right, bottom, left */
+    top: 10px;
+    right:10px;
+   /* trong suốt thẻ (bao gồm nội dung trong) */
+   /* giá trị 0 ->1  */
+   /* opacity:0.5 */
+   /* rgba */
+
+    width: 80px;
+    height: 80px;
+    background-color:rgba(255, 255, 255, 0.5 );
+    /* thẻ a là loại inline, không xét được kích thước => chuyển từ thẻ a từ inline sang bloc */
+    display: block;
+    /* Giúp căn giữa thẻ icon theo chiều ngang : text - a ;alig: center */
+    /* giúp căn giữa thẻ icon theo chiều dọc : line- height : khoảng cách giữa các dòng
+    Nếu chỉ có  1 dòng chữ, hoặc 1 kí tự thì cho line-height bằng hoặc gânf bằng chiều cao  thì sẽ căn giữa theo chiều dọc */
+    line-height: 78px;
+    border-radius: 10px;
+
+}
+.viewAll{
+    text-align: center;
+    
+}
+.viewAll button {
+    color:hsl(12deg 75% 67%);
+    margin-top: 20px;
+    border-radius: 20px;
+    font-size: 15px;
+    padding:5px 30px; 
+    border: 1px solid hsl(12deg 75% 67%);
+    background-color: #faf4f2;
+    margin-bottom: 20px;
+
+}
+.contact{
+    background-color:#e76f513d;
+    border-radius: 20px;
+    margin-bottom: 100px;
+    height: 350px;
+
+}
+.contact__img, .contact__download {
+    width: 50%;
+    float: left;
+}
+.contact__img{
+    background-image: url(/img/mask.png);
+    background-position:center ;
+    background-size:cover;
+}
+.contact__download {
+    color: #939191;
+}
+.contact__download h3 {
+    margin: 50px 0px 5px;
+}
+.contact__download p {
+    margin-bottom:20px ;
+}
+.contact__download__app h4{
+    margin-bottom: 20px;
+
+}
+.contact__dowload__Fllow h4 {
+    margin-bottom: 20px;
+
+}
+.contact__download__app, .contact__download__Fllow {
+    float: left;
+    width: 50%;
+
+}
+.contact__download__icon {
+    font-size: 25px;
+    color: #e76f51;
+    margin-right: 10px;
+}
+.footer {
+    background-color:#e76f513d;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    width: 100%;
+    height: auto;
+    padding-top: 50px;
+}
+.footer__detail, .footer__help {
+    float: left;
+    width: 50%;
+}
+.footer__detail {
+    color: #3a3735;
+}
+.footer__detail h4{
+    margin: 50px 50px 20px;
+}
+.footer__detail p {
+    margin: 50px 50px ;
+    font-size: 18px;
+}
+.footer__info h4{
+    margin: 50px 0px 20px;
+}
+.footer__choose ul {
+    list-style: none;
+     margin-top:25px;
+}
+.footer__choose li {
+    margin: 0px 20px 20px 0px;
+}
+.footer__choose a{
+    text-decoration: none;
+    color: #433f3d;
+    font-size: 18px;
+}.footer__info {
+    width: 33.33%;
+    float: left;
+}
+.footer__copyright {
+    text-align: center;
+    margin-top: 40px;
+    padding-bottom: 40px;
+}

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Camping</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />">
+</head>
+<body>
+    <!-- B1: Phân tích cac thành phần chính trong layout -->
+    <!-- 5 Thành phần chính -->
+    <!-- div: phân chia bố cục cac thành phần UI -->
+    <div id="header" class="header">
+        <a href="#">
+            <img src="./img/logoicon.png" alt="logo" class="img-logo">
+        </a>
+        <!-- ul>li*6>a -->
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Destination</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Contact us</a></li>
+        </ul>
+    </div>
+    <!-- carousel/slider/banner -->
+    <div class="carousel">
+        <!-- Thêm backgroun bằng HTML -->
+        <!-- <img src="./img/BG.png"> -->
+    </div>
+    <!-- .activities -->
+    <div class="activities">
+        <div class="title">
+            <!-- class="title": Nếu code css áp dụng chung thi đặt tên class gọn để tiện dùng chung -->
+            <!-- Cách khác BEM: thể hiện cha con của thẻ, ví dụ: tên thẻ cha chính + 2 dấu sift gạch (__) + tên riêng, ví dụ: Activities__title -->
+
+            <img src="./img/Group 313.png" alt="">
+            <h2>Explore Destinations & Activities</h2>
+        </div>
+        <div class="content">
+            <div class="activities__item">
+                <div class="activities__background">
+                    <div class="activities__image">
+                        <img src="./img/product1.png" alt="">
+                        <a href="#" class="activities_icon">
+                            <i class="fa-solid fa-heart"></i>
+                        </a>
+                    </div>
+                    <div class="activities__info">
+                        <h3>Trickle Creek Ranch</h3>
+                        <p>Book unique camping experiences on over 300,000 campsites</p>
+                        <button>Read more</button>
+                    </div>
+                </div>       
+            </div>
+            <div class="activities__item">
+                <div class="activities__background">
+                    <div class="activities__image">
+                        <img src="./img/product4.png" alt="">
+                        <a href="#" class="activities_icon">
+                            <i class="fa-solid fa-heart"></i>
+                        </a>
+                    </div>
+                    <div class="activities__info">
+                        <h3>Trickle Creek Ranch</h3>
+                        <p>Book unique camping experiences on over 300,000 campsites</p>
+                        <button>Read more</button>
+                    </div>
+                </div>       
+            </div>
+            <div class="activities__item">
+                <div class="activities__background">
+                    <div class="activities__image">
+                        <img src="./img/product5.png" alt="">
+                        <a href="#" class="activities_icon">
+                            <i class="fa-solid fa-heart"></i>
+                        </a>
+                    </div>
+                    <div class="activities__info">
+                        <h3>Trickle Creek Ranch</h3>
+                        <p>Book unique camping experiences on over 300,000 campsites</p>
+                        <button>Read more</button>
+                    </div>
+                </div>       
+            </div>
+            <div class="activities__item">
+                <div class="activities__background">
+                    <div class="activities__image">
+                        <img src="./img/product1.png" alt="">
+                        <a href="#" class="activities_icon">
+                            <i class="fa-solid fa-heart"></i>
+                        </a>
+                    </div>
+                    <div class="activities__info">
+                        <h3>Trickle Creek Ranch</h3>
+                        <p>Book unique camping experiences on over 300,000 campsites</p>
+                        <button>Read more</button>
+                    </div>
+                </div>       
+            </div>
+            <!-- clear float: xoá các ảnh hưởng của float -->
+            <div class="clear"></div>
+        </div>
+        <div class="viewAll">
+            <button>View All</button>
+        </div>
+    </div>
+    <div class="contact">   
+        <div class="contact__img">
+            <img src="./img/homeicon.png">
+        </div>
+        <div class="contact__download">           
+            <h3>Let's Stay in Touch</h3>
+            <p>Get travel planning ideas, helful tips,and stories from our visitors delivered right to your ibox</p>            
+            <div class="contact__dowload__app">
+                <h4>Download Our App</h4>
+                <img src="./img/download-on-the-app-store-apple-1.png" alt="">
+                <img src="./img/google-play-badge-1.png" alt="">
+            </div>
+            <div class="contact__download__fllow">
+                <h4>Follow Us</h4>
+                <div class="contact__download__icon">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-pinterest"></i>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+    <div class="clear"></div>
+    <div class="footer">
+        <div class="footer__detail">
+            <h4>
+                Hipcamp is everywhere you want to camp
+            </h4>
+            <p> Discover unique experiences on ranches, nature preserves, frams, vinayaeds, and public camground aceross
+                U.S . Book tent caming, treehouses, cabins, yurts, primative </p>
+        </div>
+        <div class="footer__help">
+            <div class="footer__info">
+                <h4>Let Us Help You</h4>
+                <div class="footer__choose">
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Rules & Reservation</a></li>
+                        <li><a href="#">Policies</a></li>
+                        <li><a href="#">Accwaibility</a></li>
+                        <li><a href="#">Media Center</a></li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="footer__info">
+                <h4>Let Us Help You</h4>
+                <div class="footer__choose">
+                    <ul>
+                        <li><a href="#">Find Trip Inspiration</a></li>
+                        <li><a href="#">Buil a Trip</a></li>
+                        <li><a href="#">Buy a Pass</a></li>
+                        <li><a href="#">Enter a Lottery</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__info">
+                <h4>Let Us Help You</h4>
+                <div class="footer__choose">
+                    <ul>
+                        <li><a href="#">You Accounct</a></li>
+                        <li><a href="#">Your Reservation</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Submit Feedback</a></li>
+                    </ul>
+                </div>
+            </div> 
+        </div>
+        <div class="clear"></div>
+        <div class="footer__copyright">
+            <a><i class="fa-solid fa-registered"></i>2020.All right reserved</a>
+        </div>
+    </div>
+
+    
+</body>
+</html>
